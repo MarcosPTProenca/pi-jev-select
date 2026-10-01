@@ -1,0 +1,42 @@
+{
+  "name": "pi-jev-select",
+  "version": "0.1.0",
+  "description": "Budget-feasible rule retention for Pi context compaction. Keeps safety rules verbatim by selecting lines with Jev instead of letting an LLM rewrite them.",
+  "type": "module",
+  "main": "index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./select": "./select.ts",
+    "./jev": "./jev.ts"
+  },
+  "scripts": {
+    "test": "jiti test/select.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "pi",
+    "pi-coding-agent",
+    "pi-extension",
+    "compaction",
+    "context",
+    "jev",
+    "typesafe",
+    "agent-memory",
+    "constraint-preservation"
+  ],
+  "author": "Marcos de Pinho Tavares Proença",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0"
+  },
+  "devDependencies": {
+    "jiti": "^2.0.0",
+    "typescript": "^5.5.0"
+  }
+}
